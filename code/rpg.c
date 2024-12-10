@@ -2,6 +2,14 @@
 #include <locale.h>
 #include <unistd.h>
 
+int dado()
+{
+	srand(time(0));
+	int c = 1 + (rand() % 10);   // Criei uma função que representaria a forma de um dado para poder jogar o jogo
+	printf("%d", c);
+	return c;
+}
+
 int main(void){
 	setlocale(LC_ALL, "Portuguese");
 	int avancar, escolha;
